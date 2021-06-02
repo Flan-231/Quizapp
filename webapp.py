@@ -28,7 +28,7 @@ def renderPage1():
 
 @app.route('/page2',methods=['GET','POST'])
 def renderPage2():
-    session["firstName"]=request.form['firstName']
+    session["Answer"]=request.form['Answer']
     session["lastName"]=request.form['lastName']
     
     if Answer == 'The overall temperature of the ocean increases':
