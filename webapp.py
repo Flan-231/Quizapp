@@ -30,6 +30,16 @@ def renderPage1():
 def renderPage2():
     session["firstName"]=request.form['firstName']
     session["lastName"]=request.form['lastName']
+  
+   if Answer == 'The overall temperature of the ocean increases':
+        reply = "You're answer is correct!"
+    elif Answer == 'The overall temperature of the coean decreases':
+        reply = "Incorrect"  
+    elif Answer == 'More ice blocks are formed.':
+        reply = "Incorrect"
+    else:
+      reply=" Please make sure you've typed the answer in correctly"
+      
     return render_template('page2.html')
 
 @app.route('/page3',methods=['GET','POST'])
