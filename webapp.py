@@ -32,7 +32,7 @@ def renderPage2():
     session["lastName"]=request.form['lastName']
     
     if Answer == 'The overall temperature of the ocean increases':
-        reply = "You're answer is correct!"
+        reply = "Your answer is correct!"
     elif Answer == 'The overall temperature of the coean decreases':
         reply = "Incorrect"  
     elif Answer == 'More ice blocks are formed.':
