@@ -24,7 +24,11 @@ def startOver():
 
 @app.route('/page1')
 def renderPage1():
-   session["Answer"]=request.form['Answer']
+   return render_template('page1.html')
+
+@app.route('/page2',methods=['GET','POST'])
+def renderPage2():
+    session["Answer"]=request.form['Answer']
    if Answer == 'The overall temperature of the ocean increases':
         reply = "Your answer is correct!"
    elif Answer == 'The overall temperature of the coean decreases':
@@ -33,11 +37,6 @@ def renderPage1():
         reply = "Incorrect"
    else:
     reply=" Please make sure you've typed the answer in correctly"
-   return render_template('page1.html')
-
-@app.route('/page2',methods=['GET','POST'])
-def renderPage2():
-    session["Answer"]=request.form['Answer']
    
       
     return render_template('page2.html')
