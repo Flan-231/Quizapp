@@ -29,8 +29,6 @@ def renderPage1():
 @app.route('/page2',methods=['GET','POST'])
 def renderPage2():
     session["Answer"]=request.form['Answer']
-    session["lastName"]=request.form['lastName']
-    
     if Answer == 'The overall temperature of the ocean increases':
         reply = "Your answer is correct!"
     elif Answer == 'The overall temperature of the coean decreases':
