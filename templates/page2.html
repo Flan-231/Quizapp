@@ -3,11 +3,11 @@
 {% block title %}Page 2: Ask for your favorite color{% endblock %}
 
 {% block content %}
-  <h1>Page 2: Ask for favorite color</h1>
+  <h1>Page 2: True or False, ocean acidification happens when there are more OH- ions. </h1>
 
  <form action={{ url_for("renderPage3") }} method="POST">
-  Favorite Color:<br>
-  <input type="text" name="favoriteColor">
+ Please type in "True" or "False" <br>
+  <input type="text" name="response">
   <input type="submit" value="Submit">
  </form> 
 
