@@ -43,7 +43,15 @@ def renderPage2():
 
 @app.route('/page3',methods=['GET','POST'])
 def renderPage3():
-    session["favoriteColor"]=request.form['favoriteColor']
+    session["response"]=request.form['response']
+    if response == 'True':
+        reply = "This is incorrect"
+    elif response == 'False':
+        reply = "Correct!" 
+    else:
+        reply=" Please make sure you've typed the answer in correctly"
+   
+        
     return render_template('page3.html')
     
 if __name__=="__main__":
